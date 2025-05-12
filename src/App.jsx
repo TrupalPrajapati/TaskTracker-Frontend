@@ -16,7 +16,7 @@ import { DashboardTask } from "./components/DashboardTask";
 
 function App() {
 
-  axios.defaults.baseURL = "https://task-tracker-frontend-three.vercel.app/"
+  axios.defaults.baseURL = "https://tasktracker-backend-r0lz.onrender.com"
 
   return (
     <>
