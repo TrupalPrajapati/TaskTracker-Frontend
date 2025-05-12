@@ -126,7 +126,7 @@ export const Login = () => {
             Create Account?{" "}
             <span>
               <Link
-                to="/"
+                to="/signup"
                 className="text-blue-600 hover:underline font-medium"
               >
                 Signup
