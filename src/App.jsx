@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Login } from "./common/Login";
 import { Signup } from "./common/Signup";
-import { Dashboard } from "./components/Dashboard";
+// import { Dashboard } from "./components/Dashboard";   // I make the mistake when the creation of dashboard.jsx file(typo so i make new DashboardTask)
 import { AddTask } from "./components/AddTask";
 import { TaskList } from "./components/TaskList";
 import { EditTask } from "./components/EditTask";
@@ -11,11 +11,12 @@ import { ForgotPassword } from "./common/ForgotPassword";
 import { ResetPassword } from "./common/ResetPassword";
 import { Hero } from "./common/Hero";
 import axios from "axios";
+import { DashboardTask } from "./components/DashboardTask";
 
 
 function App() {
 
-  axios.defaults.baseURL = "http://localhost:3000"
+  axios.defaults.baseURL = "https://tasktracker-backend-r0lz.onrender.com/"
 
   return (
     <>
@@ -36,7 +37,7 @@ function App() {
         <Route path="/" element={<Hero></Hero>}></Route>
         <Route path="/signup" element={<Signup></Signup>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
-        <Route path="/dashboard" element={<Dashboard></Dashboard>}>
+        <Route path="/dashboard" element={<DashboardTask></DashboardTask>}>
           <Route index element={<TaskList />} />
           <Route path="addtask" element={<AddTask></AddTask>}></Route>
           <Route path="tasklist" element={<TaskList></TaskList>}></Route>
