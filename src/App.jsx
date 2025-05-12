@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Login } from "./common/Login";
 import { Signup } from "./common/Signup";
-import { Dashboard } from "./components/dashboard";
+import { Dashboard } from "./components/Dashboard";
 import { AddTask } from "./components/AddTask";
 import { TaskList } from "./components/TaskList";
 import { EditTask } from "./components/EditTask";
