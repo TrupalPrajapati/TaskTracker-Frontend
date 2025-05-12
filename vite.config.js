@@ -8,4 +8,17 @@ export default defineConfig({
     tailwindcss(),
     react()
   ],
+  server: {
+    proxy: {
+      '/user': {
+        target: 'https://tasktracker-backend-r0lz.onrender.com',
+        changeOrigin: true,
+        secure: false,
+      },
+        '/task': {
+        target: 'https://tasktracker-backend-r0lz.onrender.com',
+        changeOrigin: true,
+      },
+    }
+  }
 })
